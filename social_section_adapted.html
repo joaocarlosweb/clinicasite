@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seção de Redes Sociais - Cores Adaptadas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: rgb(104, 52, 44);
+            --primary-light: rgb(135, 73, 65);
+            --primary-dark: rgb(84, 32, 24);
+            --primary-very-light: rgb(164, 112, 104);
+            --accent-color: rgb(184, 132, 124);
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #faf9f8;
+            --bg-gradient-1: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            --bg-gradient-2: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            --bg-gradient-3: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-light) 100%);
+            --shadow-primary: rgba(104, 52, 44, 0.3);
+            --shadow-light: rgba(104, 52, 44, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        /* Seção de Redes Sociais com cores adaptadas */
+        .social-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 50%, var(--primary-light) 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(184, 132, 124, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(164, 112, 104, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(135, 73, 65, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .social-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .social-section h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-color), #fff, var(--primary-very-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+            position: relative;
+        }
+
+        .social-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-very-light));
+            border-radius: 2px;
+        }
+
+        .social-subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .social-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 25px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .social-card:hover::before {
+            left: 100%;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(255,255,255,0.3);
+            box-shadow: 
+                0 25px 60px rgba(84, 32, 24, 0.4),
+                0 0 40px rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .social-icon-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icon {
+            font-size: 3.5rem;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .social-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            opacity: 0.4;
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.7; }
+        }
+
+        .social-card:hover .social-icon {
+            transform: scale(1.1) rotateY(360deg);
+        }
+
+        .social-info h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .social-info p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .social-description {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .social-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .stat-divider {
+            opacity: 0.5;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .social-btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-arrow {
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .social-btn:hover .btn-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Cores específicas para cada rede social adaptadas à paleta */
+        .instagram {
+            background: var(--bg-gradient-2);
+        }
+
+        .instagram .social-glow {
+            background: var(--bg-gradient-3);
+        }
+
+        .instagram-btn {
+            background: rgba(184, 132, 124, 0.3);
+            color: white;
+            border-color: rgba(184, 132, 124, 0.4);
+        }
+
+        .instagram-btn:hover {
+            background: var(--bg-gradient-3);
+            border-color: transparent;
+            box-shadow: 0 10px 30px var(--shadow-primary);
+        }
+
+        .facebook {
+            background: var(--bg-gradient-1);
+        }
+
+        .facebook .social-glow {
+            background: var(--bg-gradient-2);
+        }
+
+        .facebook-btn {
+            background: rgba(104, 52, 44, 0.3);
+            color: white;
+            border-color: rgba(104, 52, 44, 0.4);
+        }
+
+        .facebook-btn:hover {
+            background: var(--bg-gradient-1);
+            border-color: transparent;
+            box-shadow: 0 10px 30px var(--shadow-primary);
+        }
+
+        .whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+
+        .whatsapp .social-glow {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+
+        .whatsapp-btn {
+            background: rgba(37, 211, 102, 0.3);
+            color: white;
+            border-color: rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn:hover {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .youtube {
+            background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+        }
+
+        .youtube .social-glow {
+            background: linear-gradient(135deg, var(--primary-very-light), var(--accent-color));
+        }
+
+        .youtube-btn {
+            background: rgba(164, 112, 104, 0.3);
+            color: white;
+            border-color: rgba(164, 112, 104, 0.4);
+        }
+
+        .youtube-btn:hover {
+            background: linear-gradient(135deg, var(--primary-light), var(--accent-color));
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(164, 112, 104, 0.4);
+        }
+
+        /* Seção de CTA com cores adaptadas */
+        .social-cta {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(184, 132, 124, 0.1) 60deg, transparent 120deg);
+            animation: rotate-conic 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate-conic {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-cta h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-very-light));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .main-cta-btn,
+        .secondary-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .main-cta-btn {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .main-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .secondary-cta-btn {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .secondary-cta-btn:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,255,255,0.2);
+        }
+
+        .cta-icon {
+            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cta-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cta-text strong {
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        .cta-text small {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .social-section {
+                padding: 80px 0;
+            }
+
+            .social-section h2 {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .social-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .social-card {
+                padding: 1.5rem;
+                margin: 0 auto;
+                max-width: 350px;
+            }
+
+            .social-icon {
+                font-size: 3rem;
+                width: 70px;
+                height: 70px;
+            }
+
+            .social-glow {
+                width: 90px;
+                height: 90px;
+            }
+
+            .social-info h3 {
+                font-size: 1.3rem;
+            }
+
+            .social-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .social-cta {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .social-cta h3 {
+                font-size: 1.6rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .social-cta p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .main-cta-btn,
+            .secondary-cta-btn {
+                width: 100%;
+                max-width: 280px;
+                padding: 1rem 1.5rem;
+                justify-content: center;
+            }
+
+            .cta-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+            }
+
+            .cta-text strong {
+                font-size: 1rem;
+            }
+
+            .cta-text small {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Animação de carregamento */
+        .loading {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .loading.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Media Call to Action Section -->
+    <section id="social" class="social-section">
+        <div class="social-content">
+            <div class="social-header">
+                <h2>Conecte-se Conosco</h2>
+                <p class="social-subtitle">Siga nossas redes sociais para dicas de saúde, novidades e promoções exclusivas</p>
+            </div>
+            
+            <div class="social-grid">
+                <div class="social-card instagram loading">
+                    <div class="social-icon-wrapper">
+                        <div class="social-icon">📸</div>
+                        <div class="social-glow"></div>
+                    </div>
+                    <div class="social-info">
+                        <h3>Instagram</h3>
+                        <p>@clinicasantana_caico</p>
+                        <span class="social-description">Dicas de saúde, bastidores dos exames e novidades</span>
+                        <div class="social-stats">
+                            <span class="stat">2.5k seguidores</span>
+                            <span class="stat-divider">•</span>
+                            <span class="stat">150 posts</span>
+                        </div>
+                    </div>
+                    <a href="https://instagram.com/clinicasantana_caico" class="social-btn instagram-btn" target="_blank" rel="noopener">
+                        <span class="btn-text">Seguir</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="social-card facebook loading">
+                    <div class="social-icon-wrapper">
+                        <div class="social-icon">👥</div>
+                        <div class="social-glow"></div>
+                    </div>
+                    <div class="social-info">
+                        <h3>Facebook</h3>
+                        <p>Clínica Sant'Ana Caicó</p>
+                        <span class="social-description">Informações completas sobre saúde e bem-estar</span>
+                        <div class="social-stats">
+                            <span class="stat">3.2k curtidas</span>
+                            <span class="stat-divider">•</span>
+                            <span class="stat">4.8★ avaliação</span>
+                        </div>
+                    </div>
+                    <a href="https://facebook.com/clinicasantana.caico" class="social-btn facebook-btn" target="_blank" rel="noopener">
+                        <span class="btn-text">Curtir</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="social-card whatsapp loading">
+                    <div class="social-icon-wrapper">
+                        <div class="social-icon">💬</div>
+                        <div class="social-glow"></div>
+                    </div>
+                    <div class="social-info">
+                        <h3>WhatsApp</h3>
+                        <p>(84) 99897-9071</p>
+                        <span class="social-description">Atendimento rápido para agendamentos e dúvidas</span>
+                        <div class="social-stats">
+                            <span class="stat">Online agora</span>
+                            <span class="stat-divider">•</span>
+                            <span class="stat">Resposta em 5min</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5584998979071?text=Olá! Vi vocês nas redes sociais e gostaria de mais informações sobre os serviços da Clínica Sant'Ana." class="social-btn whatsapp-btn" target="_blank" rel="noopener">
+                        <span class="btn-text">Conversar</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+
+                <div class="social-card youtube loading">
+                    <div class="social-icon-wrapper">
+                        <div class="social-icon">🎥</div>
+                        <div class="social-glow"></div>
+                    </div>
+                    <div class="social-info">
+                        <h3>YouTube</h3>
+                        <p>Clínica Sant'Ana</p>
+                        <span class="social-description">Vídeos educativos sobre saúde e prevenção</span>
+                        <div class="social-stats">
+                            <span class="stat">800 inscritos</span>
+                            <span class="stat-divider">•</span>
+                            <span class="stat">25 vídeos</span>
+                        </div>
+                    </div>
+                    <a href="https://youtube.com/@clinicasantana-caico" class="social-btn youtube-btn" target="_blank" rel="noopener">
+                        <span class="btn-text">Inscrever</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="social-cta">
+                <div class="cta-content">
+                    <h3>Não perca nenhuma novidade!</h3>
+                    <p>Receba dicas de saúde, informações sobre novos exames e promoções exclusivas</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5584998979071?text=Olá! Gostaria de receber novidades e promoções da Clínica Sant'Ana pelo WhatsApp." class="main-cta-btn" target="_blank" rel="noopener">
+                            <span class="cta-icon">🔔</span>
+                            <span class="cta-text">
+                                <strong>Receber Novidades</strong>
+                                <small>No WhatsApp</small>
+                            </span>
+                        </a>
+                        <button class="secondary-cta-btn" onclick="followAllSocials()">
+                            <span class="cta-icon">❤️</span>
+                            <span class="cta-text">
+                                <strong>Seguir Todas</strong>
+                                <small>Redes Sociais</small>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Animação de carregamento ao rolar
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.loading').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Função para seguir todas as redes sociais
+        function followAllSocials() {
+            const socialLinks = [
+                { name: 'Instagram', url: 'https://www.instagram.com/clinicasantanacaico/' },
+                { name: 'Facebook', url: 'https://facebook.com/clinicasantana.caico' },
+                { name: 'YouTube', url: 'https://youtube.com/@clinicasantana-caico' },
+                { name: 'WhatsApp', url: 'https://wa.me/5584998979071?text=Olá! Vi vocês nas redes sociais e gostaria de seguir todas as novidades da Clínica Sant\'Ana.' }
+            ];
+
+            // Abre cada link de rede social com um pequeno atraso
+            socialLinks.forEach((social, index) => {
+                setTimeout(() => {
+                    window.open(social.url, '_blank', 'noopener,noreferrer');
+                    showNotification(`Abrindo ${social.name}...`, 'success');
+                }, index * 500);
+            });
+
+            // Mensagem de conclusão
+            setTimeout(() => {
+                showNotification('Todas as redes sociais foram abertas! 🎉', 'success');
+            }, socialLinks.length * 500 + 1000);
+        }
+
+        // Função de notificação melhorada
+        function showNotification(message, type = 'info', duration = 3000) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            
+            const icons = {
+                success: '✅',
+                info: 'ℹ️',
+                warning: '⚠️',
+                error: '❌'
+            };
+            
+            const colors = {
+                success: 'linear-gradient(135deg, #25d366, #128c7e)',
+                info: 'linear-gradient(135deg, var(--primary-color), var(--primary-light))',
+                warning: 'linear-gradient(135deg, var(--accent-color), var(--primary-very-light))',
+                error: 'linear-gradient(135deg, var(--primary-dark), var(--primary-color))'
+            };
+            
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span class="notification-icon">${icons[type]}</span>
+                    <span class="notification-message">${message}</span>
+                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
+                </div>
+            `;
+            
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${colors[type]};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 15px;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1);
+                z-index: 10000;
+                transform: translateX(400px);
+                transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                max-width: 350px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,255,255,0.2);
+                font-family: 'Montserrat', sans-serif;
+            `;
+            
+            const content = notification.querySelector('.notification-content');
+            content.style.cssText = `
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            `;
+            
+            const icon = notification.querySelector('.notification-icon');
+            icon.style.cssText = `
+                font-size: 1.5rem;
+                flex-shrink: 0;
+            `;
+            
+            const messageEl = notification.querySelector('.notification-message');
+            messageEl.style.cssText = `
+                flex: 1;
+                line-height: 1.4;
+                font-weight: 500;
+            `;
+            
+            const closeBtn = notification.querySelector('.notification-close');
+            closeBtn.style.cssText = `
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease;
+                flex-shrink: 0;
+            `;
+            
+            closeBtn.onmouseover = () => closeBtn.style.background = 'rgba(255,255,255,0.3)';
+            closeBtn.onmouseout = () => closeBtn.style.background = 'rgba(255,255,255,0.2)';
+            
+            document.body.appendChild(notification);
+            
+            // Animar entrada
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remover automaticamente
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 400);
+            }, duration);
+        }
+
+        // Adicionar animações aos cartões sociais
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialCards = document.querySelectorAll('.social-card');
+            socialCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('loaded');
+                }, index * 200);
+            });
+            
+            // Efeitos de hover nos ícones sociais
+            const socialIcons = document.querySelectorAll('.social-icon');
+            socialIcons.forEach(icon => {
+                icon.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.1) rotateY(180deg)';
+                });
+                
+                icon.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1) rotateY(0deg)';
+                });
+            });
+        });
+
+        // Rastreamento de cliques nas redes sociais (opcional)
+        function trackSocialClick(platform) {
+            console.log(`Clique na rede social: ${platform}`);
+            // Aqui você pode adicionar código de analytics se necessário
+        }
+
+        // Adicionar rastreamento a todos os botões sociais
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialButtons = document.querySelectorAll('.social-btn');
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const platform = this.closest('.social-card').querySelector('h3').textContent;
+                    trackSocialClick(platform);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

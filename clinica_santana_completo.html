@@ -1,0 +1,3097 @@
+            .slide:nth-child(2) {
+                background: linear-gradient(rgba(104, 52, 44, 0.6), rgba(84, 32, 24, 0.4)), 
+                            url('home2.webp');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .slide:nth-child(3) {
+                background: linear-gradient(rgba(104, 52, 44, 0.6), rgba(84, 32, 24, 0.4)), 
+                            url('home3.webp');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .slide:nth-child(4) {
+                background: linear-gradient(rgba(104, 52, 44, 0.6), rgba(84, 32, 24, 0.4)), 
+                url('home4.webp');
+                background-size: cover;
+                background-position: center;
+            }
+        
+
+        /* Small Mobile */
+        @media (max-width: 480px) {
+            .location-section {
+                padding: 60px 0;
+            }
+            
+            .map-wrapper {
+                height: 250px;
+            }
+            
+            .location-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.2rem;
+            }
+            
+            .location-icon {
+                margin-bottom: 0.5rem;
+            }
+            
+            .nav-btn {
+                padding: 0.8rem;
+            }
+            
+            .nav-btn-title {
+                font-size: 0.85rem;
+            }
+            
+            .nav-btn-subtitle {
+                font-size: 0.7rem;
+            }
+            
+            .gps-btn-content {
+                gap: 0.8rem;
+            }
+            
+            .gps-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .loading {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .loading.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div class="logo"> </div>
+            <div class="logop"><p>Clínica Sant'Ana</p></div>
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#imaging">Exames de Imagem</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#team">Equipe</a></li>
+                <li><a href="#location">Localização</a></li>
+                <li><a href="#social">Redes Sociais</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#home" onclick="closeMobileMenu()">Início</a></li>
+                    <li><a href="#services" onclick="closeMobileMenu()">Serviços</a></li>
+                    <li><a href="#imaging" onclick="closeMobileMenu()">Exames de Imagem</a></li>
+                    <li><a href="#about" onclick="closeMobileMenu()">Sobre</a></li>
+                    <li><a href="#team" onclick="closeMobileMenu()">Equipe</a></li>
+                    <li><a href="#location" onclick="closeMobileMenu()">Localização</a></li>
+                    <li><a href="#social" onclick="closeMobileMenu()">Redes Sociais</a></li>
+                    <li><a href="#contact" onclick="closeMobileMenu()">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="slideshow-container">
+            <div class="slide active"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+        <div class="slide-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+        </div>
+        <div class="hero-content">
+            <h1>Clínica Sant ' Ana</h1>
+            <p>Tecnologia avançada, resultados precisos e atendimento humanizado para cuidar melhor da sua saúde</p>
+            <a href="#contact" class="cta-button">Agendar Exame</a>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Nossos Serviços</h2>
+        <div class="services-grid">
+            <div class="service-card loading">
+                <span class="service-icon">🩸</span>
+                <h3>Exames de Sangue</h3>
+                <p>Hemograma completo, bioquímica, hormônios, marcadores tumorais e muito mais com tecnologia de ponta.</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Gostaria de agendar exames de sangue (hemograma, bioquímica, hormônios). Podem me ajudar?" class="whatsapp-btn" target="_blank">Agendar no WhatsApp</a>
+            </div>
+            <div class="service-card loading">
+                <span class="service-icon">🧪</span>
+                <h3>Análises Especializadas</h3>
+                <p>Exames genéticos, toxicológicos, microbiológicos e imunológicos com alta precisão e confiabilidade.</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Preciso de análises especializadas (genéticos, toxicológicos, microbiológicos). Como posso agendar?" class="whatsapp-btn" target="_blank">Agendar no WhatsApp</a>
+            </div>
+            <div class="service-card loading">
+                <span class="service-icon">🏥</span>
+                <h3>Check-up Executivo</h3>
+                <p>Pacotes completos de exames preventivos personalizados para executivos e profissionais.</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Tenho interesse no Check-up Executivo. Quais são os pacotes disponíveis e valores?" class="whatsapp-btn" target="_blank">Agendar no WhatsApp</a>
+            </div>
+            <div class="service-card loading">
+                <span class="service-icon">👶</span>
+                <h3>Pediatria</h3>
+                <p>Coleta especializada para crianças em ambiente acolhedor com profissionais experientes.</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Preciso agendar exames para criança. Vocês têm atendimento pediátrico especializado?" class="whatsapp-btn" target="_blank">Agendar no WhatsApp</a>
+            </div>
+            <div class="service-card loading">
+                <span class="service-icon">🏠</span>
+                <h3>Coleta Domiciliar</h3>
+                <p>Comodidade e segurança com coleta em sua residência ou empresa, mantendo os mesmos padrões de qualidade.</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Gostaria de solicitar coleta domiciliar. Qual é o procedimento e valores?" class="whatsapp-btn" target="_blank">Agendar no WhatsApp</a>
+            </div>
+            <div class="service-card loading">
+                <span class="service-icon">📱</span>
+                <h3>Resultados Online</h3>
+                <p>Acesse seus resultados de forma rápida e segura através do nosso portal online disponível 24h.</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Preciso de ajuda para acessar meus resultados online. Como faço?" class="whatsapp-btn" target="_blank">Solicitar Ajuda</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="imaging" class="section imaging-section">
+        <h2>Exames de Imagem</h2>
+        <p class="section-subtitle">Tecnologia de ponta em diagnóstico por imagem com equipamentos de última geração</p>
+        <div class="imaging-grid">
+            <div class="imaging-card loading">
+                <div class="imaging-photo">
+                    <img src="tomografia.jpg" alt="Tomografia Computadorizada">
+                    <div class="imaging-overlay">
+                        <div class="imaging-icon">🔬</div>
+                    </div>
+                </div>
+                <div class="imaging-content">
+                    <h3>Tomografia Computadorizada</h3>
+                    <p class="imaging-description">Exames de alta precisão com tecnologia multislice para diagnósticos detalhados de órgãos internos, ossos e tecidos moles.</p>
+                    <div class="imaging-features">
+                        <span class="feature-tag">Alta Resolução</span>
+                        <span class="feature-tag">Baixa Radiação</span>
+                        <span class="feature-tag">Resultados Rápidos</span>
+                    </div>
+                    <a href="https://wa.me/5584998979071?text=Olá! Gostaria de agendar uma Tomografia Computadorizada. Quais são os procedimentos e preparos necessários?" class="imaging-btn" target="_blank">
+                        <span class="btn-icon">📅</span>
+                        Agendar Tomografia
+                    </a>
+                </div>
+            </div>
+
+            <div class="imaging-card loading">
+                <div class="imaging-photo">
+                    <img src="ultrasonografia.jpg" alt="Ultrassonografia">
+                    <div class="imaging-overlay">
+                        <div class="imaging-icon">🔍</div>
+                    </div>
+                </div>
+                <div class="imaging-content">
+                    <h3>Ultrassonografia</h3>
+                    <p class="imaging-description">Exames não invasivos com equipamentos 4D de última geração para diagnósticos precisos e seguros.</p>
+                    <div class="imaging-features">
+                        <span class="feature-tag">Sem Radiação</span>
+                        <span class="feature-tag">Tempo Real</span>
+                        <span class="feature-tag">Doppler Colorido</span>
+                    </div>
+                    <a href="https://wa.me/5584998979071?text=Olá! Preciso agendar uma Ultrassonografia. Vocês realizam quais tipos de ultrassom?" class="imaging-btn" target="_blank">
+                        <span class="btn-icon">📅</span>
+                        Agendar Ultrassom
+                    </a>
+                </div>
+            </div>
+
+            <div class="imaging-card loading">
+                <div class="imaging-photo">
+                    <img src="raiox.jpg" alt="Raios-X Digital">
+                    <div class="imaging-overlay">
+                        <div class="imaging-icon">⚡</div>
+                    </div>
+                </div>
+                <div class="imaging-content">
+                    <h3>Raios-X Digital</h3>
+                    <p class="imaging-description">Sistema digital avançado com menor exposição à radiação e imagens de alta qualidade para diagnósticos precisos.</p>
+                    <div class="imaging-features">
+                        <span class="feature-tag">Digital</span>
+                        <span class="feature-tag">Menor Radiação</span>
+                        <span class="feature-tag">Imediato</span>
+                    </div>
+                    <a href="https://wa.me/5584998979071?text=Olá! Gostaria de agendar um Raio-X Digital. Preciso de informações sobre horários disponíveis." class="imaging-btn" target="_blank">
+                        <span class="btn-icon">📅</span>
+                        Agendar Raio-X
+                    </a>
+                </div>
+            </div>
+
+            <div class="imaging-card loading">
+                <div class="imaging-photo">
+                    <img src="mamografia-digital.jpg" alt="Mamografia Digital">
+                    <div class="imaging-overlay">
+                        <div class="imaging-icon">🩺</div>
+                    </div>
+                </div>
+                <div class="imaging-content">
+                    <h3>Mamografia Digital</h3>
+                    <p class="imaging-description">Tecnologia digital de ponta para rastreamento e diagnóstico precoce do câncer de mama com máximo conforto.</p>
+                    <div class="imaging-features">
+                        <span class="feature-tag">Prevenção</span>
+                        <span class="feature-tag">Alta Precisão</span>
+                        <span class="feature-tag">Conforto</span>
+                    </div>
+                    <a href="https://wa.me/5584998979071?text=Olá! Preciso agendar uma Mamografia Digital. Quais são os preparos necessários?" class="imaging-btn" target="_blank">
+                        <span class="btn-icon">📅</span>
+                        Agendar Mamografia
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about section">
+        <h2>Sobre</h2>
+        <div class="about-content">
+            <div class="about-text loading">
+                <h3>Sobre a Clínica Sant'Ana</h3>
+                <p>Há mais de 15 anos, a Clínica Sant'Ana é referência em análises clínicas, oferecendo serviços de excelência com tecnologia de ponta e uma equipe altamente qualificada.</p>
+                <p>Nossa missão é contribuir para a promoção da saúde através de diagnósticos precisos, atendimento humanizado e inovação constante em nossos processos.</p>
+                <p>Certificado pela norma ISO 15189 e credenciado pela ANVISA, garantimos a máxima qualidade e confiabilidade em todos os nossos exames.</p>
+            </div>
+            <div class="about-stats loading">
+                <div class="stat-card">
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Tipos de Exames</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50k+</span>
+                    <span class="stat-label">Pacientes Atendidos</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">99.8%</span>
+                    <span class="stat-label">Precisão dos Resultados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <h2>Nossa Equipe</h2>
+        <div class="team-grid">
+            <div class="team-card loading">
+                <div class="team-photo"><img src="dotor.webp" alt=""></div>
+                <h3>Dr. Carlos Silva</h3>
+                <p class="team-specialty">Diretor Técnico</p>
+                <p class="team-description">Biomédico especialista em análises clínicas com 20 anos de experiência em diagnósticos complexos</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Gostaria de agendar uma consulta com o Dr. Carlos Silva, Diretor Técnico da Clínica Sant'Ana. Preciso de orientações sobre análises clínicas." class="consult-btn" target="_blank">
+                    <span class="consult-icon">💬</span>
+                    Marcar Consulta 
+                </a>
+            </div>
+            <div class="team-card loading">
+                <div class="team-photo"><img src="dotor1.jpeg" alt=""></div>
+                <h3>Dra. Ana Santos</h3>
+                <p class="team-specialty">Patologista Clínica</p>
+                <p class="team-description">Especialista em diagnóstico laboratorial e medicina preventiva com foco em análises histopatológicas</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Gostaria de agendar uma consulta com a Dra. Ana Santos, Patologista Clínica. Preciso de orientações sobre diagnósticos laboratoriais." class="consult-btn" target="_blank">
+                    <span class="consult-icon">💬</span>
+                    Marcar Consulta
+                </a>
+            </div>
+            <div class="team-card loading">
+                <div class="team-photo"><img src="dotor2.jpeg" alt=""></div>
+                <h3>Prof. João Oliveira</h3>
+                <p class="team-specialty">Bioquímico Sênior</p>
+                <p class="team-description">Doutor em bioquímica clínica e pesquisador em biomarcadores com expertise em análises avançadas</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Gostaria de agendar uma consulta com o Prof. João Oliveira, Bioquímico Sênior. Preciso de orientações sobre exames bioquímicos especializados." class="consult-btn" target="_blank">
+                    <span class="consult-icon">💬</span>
+                    Marcar Consulta
+                </a>
+            </div>
+            <div class="team-card loading">
+                <div class="team-photo"><img src="dotor3.jpg" alt=""></div>
+                <h3>Maria Costa</h3>
+                <p class="team-specialty">Coordenadora de Qualidade</p>
+                <p class="team-description">Especialista em gestão da qualidade e acreditação laboratorial, garantindo excelência nos processos</p>
+                <a href="https://wa.me/5584998979071?text=Olá! Gostaria de falar com a Maria Costa, Coordenadora de Qualidade. Preciso de informações sobre os padrões de qualidade do laboratório." class="consult-btn" target="_blank">
+                    <span class="consult-icon">💬</span>
+                    Marcar Consulta
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="location-section">
+        <div class="section">
+            <h2>Nossa Localização</h2>
+            <p class="section-subtitle">Encontre-nos facilmente no centro de Caicó/RN</p>
+            
+            <div class="location-content">
+                <div class="map-container">
+                    <div class="map-wrapper">
+                        <!-- Google Maps Embed -->
+                        <iframe 
+                            src="https://www.google.com/maps?q=Clínica+Sant'Ana+Medicina+Diagnóstica+Dr.+Iran+Campos,+R.+Joaquim+Gregório,+692+-+Penedo,+Caicó+-+RN,+59300-000&z=17&output=embed"
+                            width="100%" 
+                            height="400" 
+                            style="border:0; border-radius: 15px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="map-overlay">
+                            <div class="location-marker">
+                                <div class="marker-pulse"></div>
+                                <div class="marker-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                        <h4>Navegue até nós:</h4>
+                        <div class="nav-buttons-grid">
+                            <!-- Google Maps -->
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=Clínica+Sant%27Ana+Medicina+Diagnóstica+Dr.+Iran+Campos,+R.+Joaquim+Gregório,+692+-+Penedo,+Caicó+-+RN,+59300-000" 
+                               class="nav-btn google-maps" target="_blank" rel="noopener">
+                                <div class="nav-btn-icon">🗺️</div>
+                                <div class="nav-btn-text">
+                                    <span class="nav-btn-title">Google Maps</span>
+                                    <span class="nav-btn-subtitle">Navegação completa</span>
+                                </div>
+                            </a>
+                            
+                            <!-- Waze -->
+                            <a href="https://waze.com/ul?ll=-6.4696253,-37.0849046&navigate=yes"
+                                class="nav-btn waze" target="_blank" rel="noopener">
+                                    <div class="nav-btn-icon">🚗</div>
+                                    <div class="nav-btn-text">
+                                        <span class="nav-btn-title">Waze</span>
+                                        <span class="nav-btn-subtitle">Melhor rota</span>
+                                    </div>
+                            </a>
+
+                            
+                            <!-- Apple Maps -->
+                            <a href="http://maps.apple.com/?daddr=Clinica+Sant'Ana+Medicina+Diagnostica+Dr.+Iran+Campos,+R.+Joaquim+Gregorio,+692+-+Penedo,+Caico+-+RN,+59300-000" 
+                               class="nav-btn apple-maps" target="_blank" rel="noopener">
+                                <div class="nav-btn-icon">🍎</div>
+                                <div class="nav-btn-text">
+                                    <span class="nav-btn-title">Apple Maps</span>
+                                    <span class="nav-btn-subtitle">iPhone/iPad</span>
+                                </div>
+                            </a>
+                            
+                            <!-- WhatsApp Location -->
+                            <a href="https://wa.me/5584998979071?text=Olá! Preciso de ajuda para chegar à Clínica Sant'Ana. Podem me orientar?" 
+                               class="nav-btn whatsapp-location" target="_blank" rel="noopener">
+                                <div class="nav-btn-icon">💬</div>
+                                <div class="nav-btn-text">
+                                    <span class="nav-btn-title">Pedir Ajuda</span>
+                                    <span class="nav-btn-subtitle">Via WhatsApp</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <!-- Quick GPS Button -->
+                        <button class="gps-quick-btn" onclick="openGPSNavigation()">
+                            <div class="gps-btn-content">
+                                <div class="gps-icon">🧭</div>
+                                <div class="gps-text">
+                                    <span class="gps-title">Navegar Agora</span>
+                                    <span class="gps-subtitle">Abrir GPS automaticamente</span>
+                                </div>
+                            </div>
+                            <div class="gps-btn-arrow">→</div>
+                        </button>
+                    </div>
+
+                <div class="location-info">
+                    <div class="location-details">
+                        <div class="location-card">
+                            <div class="location-icon">📍</div>
+                            <div class="location-text">
+                                <h4>Endereço Completo</h4>
+                                <p>R. Joaquim Gregório, 692<br>Penedo - Caicó/RN<br>CEP: 59300-000</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <div class="location-icon">🚗</div>
+                            <div class="location-text">
+                                <h4>Como Chegar</h4>
+                                <p>Localizado no bairro Penedo, próximo ao centro da cidade e fácil acesso</p>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <div class="location-icon">🅿️</div>
+                            <div class="location-text">
+                                <h4>Estacionamento</h4>
+                                <p>Vagas gratuitas disponíveis em frente à clínica</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Call to Action Section -->
+    <section id="social" class="social-section">
+        <div class="section">
+            <div class="social-content">
+                <div class="social-header">
+                    <h2>Conecte-se Conosco</h2>
+                    <p class="social-subtitle">Siga nossas redes sociais para dicas de saúde, novidades e promoções exclusivas</p>
+                </div>
+                
+                <div class="social-grid">
+                    <div class="social-card instagram loading">
+                        <div class="social-icon-wrapper">
+                            <div class="social-icon">📸</div>
+                            <div class="social-glow"></div>
+                        </div>
+                        <div class="social-info">
+                            <h3>Instagram</h3>
+                            <p>@clinicasantana_caico</p>
+                            <span class="social-description">Dicas de saúde, bastidores dos exames e novidades</span>
+                            <div class="social-stats">
+                                <span class="stat">2.5k seguidores</span>
+                                <span class="stat-divider">•</span>
+                                <span class="stat">150 posts</span>
+                            </div>
+                        </div>
+                        <a href="https://instagram.com/clinicasantana_caico" class="social-btn instagram-btn" target="_blank" rel="noopener">
+                            <span class="btn-text">Seguir</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="social-card facebook loading">
+                        <div class="social-icon-wrapper">
+                            <div class="social-icon">👥</div>
+                            <div class="social-glow"></div>
+                        </div>
+                        <div class="social-info">
+                            <h3>Facebook</h3>
+                            <p>Clínica Sant'Ana Caicó</p>
+                            <span class="social-description">Informações completas sobre saúde e bem-estar</span>
+                            <div class="social-stats">
+                                <span class="stat">3.2k curtidas</span>
+                                <span class="stat-divider">•</span>
+                                <span class="stat">4.8★ avaliação</span>
+                            </div>
+                        </div>
+                        <a href="https://facebook.com/clinicasantana.caico" class="social-btn facebook-btn" target="_blank" rel="noopener">
+                            <span class="btn-text">Curtir</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="social-card whatsapp loading">
+                        <div class="social-icon-wrapper">
+                            <div class="social-icon">💬</div>
+                            <div class="social-glow"></div>
+                        </div>
+                        <div class="social-info">
+                            <h3>WhatsApp</h3>
+                            <p>(84) 99897-9071</p>
+                            <span class="social-description">Atendimento rápido para agendamentos e dúvidas</span>
+                            <div class="social-stats">
+                                <span class="stat">Online agora</span>
+                                <span class="stat-divider">•</span>
+                                <span class="stat">Resposta em 5min</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/5584998979071?text=Olá! Vi vocês nas redes sociais e gostaria de mais informações sobre os serviços da Clínica Sant'Ana." class="social-btn whatsapp-btn" target="_blank" rel="noopener">
+                            <span class="btn-text">Conversar</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+
+                    <div class="social-card youtube loading">
+                        <div class="social-icon-wrapper">
+                            <div class="social-icon">🎥</div>
+                            <div class="social-glow"></div>
+                        </div>
+                        <div class="social-info">
+                            <h3>YouTube</h3>
+                            <p>Clínica Sant'Ana</p>
+                            <span class="social-description">Vídeos educativos sobre saúde e prevenção</span>
+                            <div class="social-stats">
+                                <span class="stat">800 inscritos</span>
+                                <span class="stat-divider">•</span>
+                                <span class="stat">25 vídeos</span>
+                            </div>
+                        </div>
+                        <a href="https://youtube.com/@clinicasantana-caico" class="social-btn youtube-btn" target="_blank" rel="noopener">
+                            <span class="btn-text">Inscrever</span>
+                            <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="social-cta">
+                    <div class="cta-content">
+                        <h3>Não perca nenhuma novidade!</h3>
+                        <p>Receba dicas de saúde, informações sobre novos exames e promoções exclusivas</p>
+                        <div class="cta-buttons">
+                            <a href="https://wa.me/5584998979071?text=Olá! Gostaria de receber novidades e promoções da Clínica Sant'Ana pelo WhatsApp." class="main-cta-btn" target="_blank" rel="noopener">
+                                <span class="cta-icon">🔔</span>
+                                <span class="cta-text">
+                                    <strong>Receber Novidades</strong>
+                                    <small>No WhatsApp</small>
+                                </span>
+                            </a>
+                            <button class="secondary-cta-btn" onclick="followAllSocials()">
+                                <span class="cta-icon">❤️</span>
+                                <span class="cta-text">
+                                    <strong>Seguir Todas</strong>
+                                    <small>Redes Sociais</small>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Entre em Contato</h3>
+                <div class="contact-item loading">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Endereço</h4>
+                        <p>R. Joaquim Gregório, 692<br>Penedo - Caicó/RN<br>CEP: 59300-000</p>
+                    </div>
+                </div>
+                <div class="contact-item loading">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Telefone</h4>
+                        <p>(84) 3123-4567</p>
+                        <p>WhatsApp: (84) 99897-9071</p>
+                        <a href="https://wa.me/5584998979071?text=Olá! Gostaria de informações sobre os serviços da clínica." style="color: #25d366; text-decoration: none; font-weight: bold;">💬 Falar no WhatsApp</a>
+                    </div>
+                </div>
+                <div class="contact-item loading">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>E-mail</h4>
+                        <p>contato@clinicasantana.com.br</p>
+                        <p>resultados@clinicasantana.com.br</p>
+                    </div>
+                </div>
+                <div class="contact-item loading">
+                    <div class="contact-icon">🕒</div>
+                    <div>
+                        <h4>Horário de Funcionamento</h4>
+                        <p>Segunda a Sexta: 6h às 18h</p>
+                        <p>Sábados: 6h às 12h</p>
+                    </div>
+                </div>
+            </div>
+            <div class="appointment-form loading">
+                <h3>Agendar Exame</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exam">Tipo de Exame</label>
+                        <select id="exam" required>
+                            <option value="">Selecione o exame</option>
+                            <option value="hemograma">Hemograma Completo</option>
+                            <option value="bioquimica">Exames Bioquímicos</option>
+                            <option value="hormonio">Dosagem Hormonal</option>
+                            <option value="checkup">Check-up Executivo</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Data Preferencial</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Observações</label>
+                        <textarea id="message" rows="3" placeholder="Informações adicionais (opcional)"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Solicitar Agendamento</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Clínica Sant'Ana - Medicina Diagnóstica. Todos os direitos reservados.</p>
+        <p>CNPJ: 12.345.678/0001-90 | Responsável Técnico: Dr. Iran Campos - CRM 12345/RN</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Loading animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('loaded');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.loading').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Solicitação de agendamento enviada com sucesso! Entraremos em contato em breve.');
+            this.reset();
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(104, 52, 44, 0.95)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, rgb(104, 52, 44) 0%, rgb(84, 32, 24) 100%)';
+            }
+        });
+
+        // Slideshow functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slideshow every 4 seconds
+        setInterval(nextSlide, 4000);
+
+        // Manual slide control with indicators
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
+
+        const heroSection = document.querySelector('.hero');
+
+        heroSection.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        heroSection.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    // Swipe left - next slide
+                    nextSlide();
+                } else {
+                    // Swipe right - previous slide
+                    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                    showSlide(currentSlide);
+                }
+            }
+        }
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Prevent scroll when mobile menu is open
+        const mobileMenu = document.getElementById('mobileMenu');
+        const observer2 = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    if (mobileMenu.classList.contains('active')) {
+                        document.body.style.overflow = 'hidden';
+                    } else {
+                        document.body.style.overflow = '';
+                    }
+                }
+            });
+        });
+        
+        // GPS Navigation Function
+        function openGPSNavigation() {
+            // Endereço formatado
+            const endereco = encodeURIComponent("Clínica Sant'Ana Medicina Diagnóstica Dr. Iran Campos, R. Joaquim Gregório, 692 - Penedo, Caicó - RN, 59300-000");
+
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Google Maps no Android
+                const url = `https://www.google.com/maps/dir/?api=1&destination=${endereco}&travelmode=driving`;
+                window.open(url, '_blank');
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Apple Maps no iOS
+                const url = `http://maps.apple.com/?daddr=${endereco}`;
+                window.open(url, '_blank');
+            } else {
+                // Navegador comum (desktop ou desconhecido)
+                const url = `https://www.google.com/maps/dir/?api=1&destination=${endereco}&travelmode=driving`;
+                window.open(url, '_blank');
+            }
+
+            showNotification('Abrindo GPS para Clínica Sant\'Ana...', 'success');
+        }
+
+        observer2.observe(mobileMenu, { attributes: true });
+
+        // Follow All Socials Function
+        function followAllSocials() {
+            const socialLinks = [
+                { name: 'Instagram', url: 'https://instagram.com/clinicasantana_caico' },
+                { name: 'Facebook', url: 'https://facebook.com/clinicasantana.caico' },
+                { name: 'YouTube', url: 'https://youtube.com/@clinicasantana-caico' },
+                { name: 'WhatsApp', url: 'https://wa.me/5584998979071?text=Olá! Vi vocês nas redes sociais e gostaria de seguir todas as novidades da Clínica Sant\'Ana.' }
+            ];
+
+            // Open each social media link with a small delay
+            socialLinks.forEach((social, index) => {
+                setTimeout(() => {
+                    window.open(social.url, '_blank', 'noopener,noreferrer');
+                    showNotification(`Abrindo ${social.name}...`, 'success');
+                }, index * 500); // 500ms delay between each opening
+            });
+
+            // Show completion message
+            setTimeout(() => {
+                showNotification('Todas as redes sociais foram abertas! 🎉', 'success');
+            }, socialLinks.length * 500 + 1000);
+        }
+
+        // Enhanced notification function with better styling
+        function showNotification(message, type = 'info', duration = 3000) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            
+            const icons = {
+                success: '✅',
+                info: 'ℹ️',
+                warning: '⚠️',
+                error: '❌'
+            };
+            
+            const colors = {
+                success: 'linear-gradient(135deg, #25d366, #128c7e)',
+                info: 'linear-gradient(135deg, #17a2b8, #138496)',
+                warning: 'linear-gradient(135deg, #ffc107, #e0a800)',
+                error: 'linear-gradient(135deg, #dc3545, #c82333)'
+            };
+            
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <span class="notification-icon">${icons[type]}</span>
+                    <span class="notification-message">${message}</span>
+                    <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
+                </div>
+            `;
+            
+            // Add enhanced styles
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background: ${colors[type]};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 15px;
+                box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1);
+                z-index: 10000;
+                transform: translateX(400px);
+                transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                max-width: 350px;
+                backdrop-filter: blur(10px);
+                border: 1px solid rgba(255,255,255,0.2);
+                font-family: 'Montserrat', sans-serif;
+            `;
+            
+            // Style the content
+            const content = notification.querySelector('.notification-content');
+            content.style.cssText = `
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            `;
+            
+            const icon = notification.querySelector('.notification-icon');
+            icon.style.cssText = `
+                font-size: 1.5rem;
+                flex-shrink: 0;
+                animation: bounce 0.6s ease;
+            `;
+            
+            const messageEl = notification.querySelector('.notification-message');
+            messageEl.style.cssText = `
+                flex: 1;
+                line-height: 1.4;
+                font-weight: 500;
+            `;
+            
+            const closeBtn = notification.querySelector('.notification-close');
+            closeBtn.style.cssText = `
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s ease;
+                flex-shrink: 0;
+            `;
+            
+            closeBtn.onmouseover = () => closeBtn.style.background = 'rgba(255,255,255,0.3)';
+            closeBtn.onmouseout = () => closeBtn.style.background = 'rgba(255,255,255,0.2)';
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Auto remove
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 400);
+            }, duration);
+        }
+
+        // Add bounce animation keyframes to the document
+        if (!document.querySelector('#notification-styles')) {
+            const styleSheet = document.createElement('style');
+            styleSheet.id = 'notification-styles';
+            styleSheet.textContent = `
+                @keyframes bounce {
+                    0%, 20%, 53%, 80%, 100% { transform: translate3d(0,0,0); }
+                    40%, 43% { transform: translate3d(0,-8px,0); }
+                    70% { transform: translate3d(0,-4px,0); }
+                    90% { transform: translate3d(0,-2px,0); }
+                }
+                
+                .notification-stack {
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    z-index: 10000;
+                    pointer-events: none;
+                }
+                
+                .notification-stack .notification {
+                    pointer-events: all;
+                    margin-bottom: 1rem;
+                }
+            `;
+            document.head.appendChild(styleSheet);
+        }
+
+        // Smooth scroll behavior for social section links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add loading animations to social cards
+            const socialCards = document.querySelectorAll('.social-card');
+            socialCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('loaded');
+                }, index * 200);
+            });
+            
+            // Add hover effects to social icons
+            const socialIcons = document.querySelectorAll('.social-icon');
+            socialIcons.forEach(icon => {
+                icon.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.1) rotateY(180deg)';
+                });
+                
+                icon.addEventListener('mouseout', function() {
+                    this.style.transform = 'scale(1) rotateY(0deg)';
+                });
+            });
+        });
+
+        // Track social media clicks for analytics (optional)
+        function trackSocialClick(platform) {
+            console.log(`Social media click: ${platform}`);
+            // Here you could add Google Analytics or other tracking code
+            // gtag('event', 'click', { 'event_category': 'social', 'event_label': platform });
+        }
+
+        // Add click tracking to all social buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialButtons = document.querySelectorAll('.social-btn');
+            socialButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const platform = this.closest('.social-card').querySelector('h3').textContent;
+                    trackSocialClick(platform);
+                });
+            });
+        });
+    </script>
+</body>
+</html>        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+                min-height: 60vh;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 0.9rem;
+            }
+
+            .section {
+                padding: 60px 1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .imaging-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .imaging-card {
+                margin: 0 auto;
+                max-width: 400px;
+            }
+
+            .imaging-photo {
+                height: 200px;
+            }
+
+            .imaging-content {
+                padding: 1.5rem;
+            }
+
+            .imaging-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .imaging-description {
+                font-size: 0.8rem;
+                margin-bottom: 1rem;
+            }
+
+            .imaging-btn {
+                padding: 10px 16px;
+                font-size: 0.8rem;
+                min-height: 44px;
+            }
+
+            .feature-tag {
+                font-size: 0.65rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .imaging-features {
+                margin-bottom: 1.5rem;
+            }
+
+            .consult-icon {
+                font-size: 0.9rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .whatsapp-btn {
+                padding: 8px 16px;
+                font-size: 0.8rem;
+            }
+
+            .contact-item {
+                padding: 1rem;
+            }
+
+            .appointment-form {
+                padding: 1rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .submit-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 1.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            /* Location Mobile Responsive */
+            .location-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .map-wrapper {
+                height: 300px;
+            }
+            
+            .nav-buttons-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            
+            .location-card {
+                padding: 1rem;
+            }
+            
+            .navigation-buttons {
+                padding: 1.5rem;
+            }
+            
+            .gps-quick-btn {
+                padding: 1rem;
+            }
+            
+            .gps-title {
+                font-size: 1rem;
+            }
+            
+            .gps-subtitle {
+                font-size: 0.8rem;
+            }
+
+            /* Social Media Mobile Responsive */
+            .social-section {
+                padding: 80px 0;
+            }
+
+            .social-section h2 {
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            .social-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .social-card {
+                padding: 1.5rem;
+                margin: 0 auto;
+                max-width: 350px;
+            }
+
+            .social-icon {
+                font-size: 3rem;
+                width: 70px;
+                height: 70px;
+            }
+
+            .social-glow {
+                width: 90px;
+                height: 90px;
+            }
+
+            .social-info h3 {
+                font-size: 1.3rem;
+            }
+
+            .social-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .social-cta {
+                padding: 2rem 1.5rem;
+                margin: 0 1rem;
+            }
+
+            .social-cta h3 {
+                font-size: 1.6rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .social-cta p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .main-cta-btn,
+            .secondary-cta-btn {
+                width: 100%;
+                max-width: 280px;
+                padding: 1rem 1.5rem;
+                justify-content: center;
+            }
+
+            .cta-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.3rem;
+            }
+
+            .cta-text strong {
+                font-size: 1rem;
+            }
+
+            .cta-text small {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Large Screens */
+        @media (min-width: 1400px) {
+            .section {
+                max-width: 1400px;
+            }
+
+            .hero h1 {
+                font-size: 6rem;
+            }
+
+            .hero p {
+                font-size: 1.4rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1300px;
+                margin: 0 auto;
+            }
+
+            .imaging-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+        }
+
+        /* Navigation Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(104, 52, 44, 0.98);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        .mobile-menu li {
+            margin: 0;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu a:hover {
+            background: rgba(255,255,255,0.1);
+            padding-left: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: relative;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .logop {
+                font-size: 20px;
+            }
+        }
+
+        /* Improve touch targets for mobile */
+        @media (max-width: 768px) {
+            .whatsapp-btn,
+            .cta-button,
+            .submit-btn {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .indicator {
+                min-width: 44px;
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .indicator::after {
+                content: '';
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                transition: all 0.3s ease;
+            }
+
+            .indicator.active::after {
+                background: white;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        /* Optimize images for different screen sizes */
+        @media (max-width: 768px) {
+            .slide:nth-child(1) {
+                background: linear-gradient(rgba(104, 52, 44, 0.6), rgba(84, 32, 24, 0.4)), 
+                            url('home1.webp');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .slide:nth-child(2) {
+                background: linear-gradient(rgba(104, 52, 44, 0.6), rgba(84, 32, 24, 0.4)), 
+                            url('home2.webp');
+                background-size: cover;
+                background-position: center;<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Sant'Ana - Laboratório de Análises Clínicas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap" rel="stylesheet">      
+    <style>
+        :root {
+            --primary-color: rgb(104, 52, 44);
+            --primary-light: rgb(135, 73, 65);
+            --primary-dark: rgb(84, 32, 24);
+            --primary-very-light: rgb(164, 112, 104);
+            --accent-color: rgb(184, 132, 124);
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #faf9f8;
+            --bg-gradient-1: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            --bg-gradient-2: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+            --bg-gradient-3: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-light) 100%);
+            --shadow-primary: rgba(104, 52, 44, 0.3);
+            --shadow-light: rgba(104, 52, 44, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Imaging Section */
+        .imaging-section {
+            background: linear-gradient(135deg, #faf9f8 0%, #f5f2f1 100%);
+            padding: 80px 0;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .imaging-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .imaging-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow-light);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .imaging-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px var(--shadow-primary);
+        }
+
+        .imaging-photo {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .imaging-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .imaging-card:hover .imaging-photo img {
+            transform: scale(1.1);
+        }
+
+        .imaging-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-gradient-1);
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .imaging-card:hover .imaging-overlay {
+            opacity: 1;
+        }
+
+        .imaging-icon {
+            font-size: 3rem;
+            color: white;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .imaging-content {
+            padding: 2rem;
+        }
+
+        .imaging-content h3 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .imaging-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .imaging-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .feature-tag {
+            background: var(--bg-gradient-3);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .imaging-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: var(--bg-gradient-1);
+            color: white;
+            padding: 14px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px var(--shadow-primary);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .imaging-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .imaging-btn:hover::before {
+            left: 100%;
+        }
+
+        .imaging-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px var(--shadow-primary);
+        }
+
+        .btn-icon {
+            font-size: 1.1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-3px); }
+            60% { transform: translateY(-2px); }
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-gradient-1);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px var(--shadow-light);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-image: url("logo1.jpg");
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .logop {
+            text-align: center;
+            font-size: 26px;
+        
+        }
+
+        .logo::before {
+            content: "";
+            margin-left: 60px;
+            font-size: 18px;
+            font-size: 2rem;
+            left: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Slideshow */
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(104, 52, 44, 0.6) 0%, rgba(84, 32, 24, 0.4) 100%);
+        }
+
+        /* Slide Images */
+        .slide:nth-child(1) {
+            background-image: url("home1.webp");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide:nth-child(2) {
+            background: linear-gradient(rgba(104, 52, 44, 0.5), rgba(84, 32, 24, 0.3)), 
+                        url('home7.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide:nth-child(3) {
+            background: linear-gradient(rgba(104, 52, 44, 0.5), rgba(84, 32, 24, 0.3)), 
+                        url('home2.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide:nth-child(4) {
+            background: linear-gradient(rgba(104, 52, 44, 0.5), rgba(84, 32, 24, 0.3)), 
+                        url('home3.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Slide Indicators */
+        .slide-indicators {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .indicator.active {
+            background: white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .indicator:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: scale(1.2);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero h1 {
+            font-family: "Satisfy", cursive;
+            font-size: 90px;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-color), var(--primary-light));
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px var(--shadow-primary);
+            animation: fadeInUp 1s ease 0.4s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px var(--shadow-primary);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 40px;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--bg-gradient-3);
+            border-radius: 2px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px var(--shadow-light);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px var(--shadow-primary);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #25d366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-btn::before {
+            content: "📱";
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f0eeec 100%);
+            padding: 80px 0;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: scale(1.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            text-align: center;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: var(--bg-gradient-3);
+            background-image: url("dotor.jpg");
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .team-photo img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        /* Team Consultation Button */
+        .consult-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.25);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        .consult-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .consult-btn:hover::before {
+            left: 100%;
+        }
+
+        .consult-btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.35);
+            border-color: rgba(255,255,255,0.3);
+        }
+
+        .consult-btn:active {
+            transform: translateY(-1px) scale(0.98);
+            transition: all 0.1s ease;
+        }
+
+        .consult-icon {
+            font-size: 1.1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .team-specialty {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            font-style: italic;
+        }
+
+        .team-description {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+        }
+
+        /* Location Section */
+        .location-section {
+            background: linear-gradient(135deg, var(--bg-light) 0%, #f5f2f1 100%);
+            padding: 80px 0;
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: start;
+        }
+
+        .map-container {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+
+        .map-container:hover {
+            box-shadow: 0 25px 70px var(--shadow-primary);
+            transform: translateY(-5px);
+        }
+
+        .map-wrapper {
+            position: relative;
+            width: 100%;
+            height: 400px;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .location-marker {
+            position: relative;
+            width: 20px;
+            height: 20px;
+        }
+
+        .marker-pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulse-marker 2s infinite;
+        }
+
+        .marker-dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        @keyframes pulse-marker {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.3;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .location-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .location-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .location-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            transition: all 0.3s ease;
+        }
+
+        .location-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px var(--shadow-primary);
+        }
+
+        .location-icon {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .location-text h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .location-text p {
+            color: var(--text-light);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .navigation-buttons {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px var(--shadow-light);
+        }
+
+        .navigation-buttons h4 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .nav-buttons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .nav-btn:hover::before {
+            left: 100%;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--shadow-light);
+        }
+
+        .nav-btn-icon {
+            font-size: 1.3rem;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .nav-btn-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-btn-title {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .nav-btn-subtitle {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            margin-top: 0.1rem;
+        }
+
+        /* Specific colors for navigation buttons */
+        .google-maps {
+            border-color: #4285f4;
+        }
+
+        .google-maps:hover {
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+        }
+
+        .google-maps:hover .nav-btn-title,
+        .google-maps:hover .nav-btn-subtitle {
+            color: white;
+        }
+
+        .waze {
+            border-color: #33ccff;
+        }
+
+        .waze:hover {
+            background: linear-gradient(135deg, #33ccff, #0099cc);
+            color: white;
+        }
+
+        .waze:hover .nav-btn-title,
+        .waze:hover .nav-btn-subtitle {
+            color: white;
+        }
+
+        .apple-maps {
+            border-color: #007aff;
+        }
+
+        .apple-maps:hover {
+            background: linear-gradient(135deg, #007aff, #0051d0);
+            color: white;
+        }
+
+        .apple-maps:hover .nav-btn-title,
+        .apple-maps:hover .nav-btn-subtitle {
+            color: white;
+        }
+
+        .whatsapp-location {
+            border-color: #25d366;
+        }
+
+        .whatsapp-location:hover {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+        }
+
+        .whatsapp-location:hover .nav-btn-title,
+        .whatsapp-location:hover .nav-btn-subtitle {
+            color: white;
+        }
+
+        /* GPS Quick Button */
+        .gps-quick-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.2rem;
+            background: var(--bg-gradient-1);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px var(--shadow-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gps-quick-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .gps-quick-btn:hover::before {
+            left: 100%;
+        }
+
+        .gps-quick-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px var(--shadow-primary);
+        }
+
+        .gps-btn-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .gps-icon {
+            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: rotate-gps 3s linear infinite;
+        }
+
+        @keyframes rotate-gps {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .gps-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .gps-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .gps-subtitle {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .gps-btn-arrow {
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .gps-quick-btn:hover .gps-btn-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Social Media Section */
+        .social-section {
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,105,180,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0,191,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(50,205,50,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .social-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .social-section h2 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff6b9d, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none;
+        }
+
+        .social-section h2::after {
+            background: linear-gradient(135deg, #ff6b9d, #4ecdc4);
+        }
+
+        .social-subtitle {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .social-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 25px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+
+        .social-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .social-card:hover::before {
+            left: 100%;
+        }
+
+        .social-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: rgba(255,255,255,0.2);
+            box-shadow: 
+                0 25px 60px rgba(0,0,0,0.3),
+                0 0 40px rgba(255,255,255,0.1);
+        }
+
+        .social-icon-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icon {
+            font-size: 3.5rem;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease;
+        }
+
+        .social-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.6; }
+        }
+
+        .social-card:hover .social-icon {
+            transform: scale(1.1) rotateY(360deg);
+        }
+
+        .social-info h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .social-info p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .social-description {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .social-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .stat-divider {
+            opacity: 0.3;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .social-btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-arrow {
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+
+        .social-btn:hover .btn-arrow {
+            transform: translateX(5px);
+        }
+
+        /* Specific social media colors */
+        .instagram {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+        }
+
+        .instagram .social-glow {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+        }
+
+        .instagram-btn {
+            background: rgba(131, 58, 180, 0.2);
+            color: white;
+            border-color: rgba(131, 58, 180, 0.3);
+        }
+
+        .instagram-btn:hover {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(131, 58, 180, 0.4);
+        }
+
+        .facebook {
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+        }
+
+        .facebook .social-glow {
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+        }
+
+        .facebook-btn {
+            background: rgba(24, 119, 242, 0.2);
+            color: white;
+            border-color: rgba(24, 119, 242, 0.3);
+        }
+
+        .facebook-btn:hover {
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(24, 119, 242, 0.4);
+        }
+
+        .whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+
+        .whatsapp .social-glow {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+        }
+
+        .whatsapp-btn {
+            background: rgba(37, 211, 102, 0.2);
+            color: white;
+            border-color: rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .youtube {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+        }
+
+        .youtube .social-glow {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+        }
+
+        .youtube-btn {
+            background: rgba(255, 0, 0, 0.2);
+            color: white;
+            border-color: rgba(255, 0, 0, 0.3);
+        }
+
+        .youtube-btn:hover {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+        }
+
+        /* Social CTA Section */
+        .social-cta {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(255,255,255,0.05) 60deg, transparent 120deg);
+            animation: rotate-conic 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes rotate-conic {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-cta h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-cta p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .main-cta-btn,
+        .secondary-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .main-cta-btn {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+        }
+
+        .main-cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+        }
+
+        .secondary-cta-btn {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .secondary-cta-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,255,255,0.1);
+        }
+
+        .cta-icon {
+            font-size: 1.5rem;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .cta-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cta-text strong {
+            font-size: 1.1rem;
+            line-height: 1.2;
+        }
+
+        .cta-text small {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-gradient-1);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .contact h3 {
+            font-size: 29px;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 0 2rem;
+        }
+
+        .contact-info {
+            space-y: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .appointment-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.9);
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            background: var(--bg-gradient-3);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px var(--shadow-primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
